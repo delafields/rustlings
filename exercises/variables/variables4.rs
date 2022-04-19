@@ -1,9 +1,8 @@
 // variables4.rs
 // Make me compile! Execute the command `rustlings hint variables4` if you want a hint :)
 
-// I AM NOT DONE
-
 fn main() {
-    let x: i32;
+    // SOLVED initialized x with value 420, this is similar to lesson 2
+    let x: i32 = 420;
     println!("Number {}", x);
 }
