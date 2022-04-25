@@ -4,8 +4,6 @@
 // Make the code compile and the tests pass!
 // If you have issues execute `rustlings hint structs3`
 
-// I AM NOT DONE
-
 #[derive(Debug)]
 struct Package {
     sender_country: String,
@@ -16,7 +14,8 @@ struct Package {
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: i32) -> Package {
         if weight_in_grams <= 0 {
-            // panic statement goes here...
+            // SOLVED added line below
+            panic!("weight cannot be less than 0!")
         } else {
             Package {
                 sender_country,
@@ -25,13 +24,17 @@ impl Package {
             }
         }
     }
-
-    fn is_international(&self) -> ??? {
-        // Something goes here...
+    // SOLVED return bool and ifelse logic
+    fn is_international(&self) -> bool {
+        if &self.sender_country != &self.recipient_country {
+            return true;
+        } else {
+            return false;
+        }
     }
-
-    fn get_fees(&self, cents_per_gram: i32) -> ??? {
-        // Something goes here...
+    // SOLVED return int and fee logic
+    fn get_fees(&self, cents_per_gram: i32) -> i32 {
+        return &self.weight_in_grams * cents_per_gram;
     }
 }
 
