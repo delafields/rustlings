@@ -3,14 +3,23 @@
 
 // Execute `rustlings hint generics2` for hints!
 
-// I AM NOT DONE
+// struct Wrapper {
+//     value: u32,
+// }
 
-struct Wrapper {
-    value: u32,
+// impl Wrapper {
+//     pub fn new(value: u32) -> Self {
+//         Wrapper { value }
+//     }
+// }
+
+// SOLVED, reformat Wrapper to accept a generic type vs a concrete type
+struct Wrapper<T> {
+    value: T
 }
-
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+// SOLVED, reformat Wrapper to accept a generic type vs a concrete type
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
         Wrapper { value }
     }
 }
