@@ -10,13 +10,21 @@
 // No boiler plate code this time,
 // you can do this!
 
-// I AM NOT DONE
-
 trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
 //TODO: Add your code here
+// SOLVED added implementation for append_bar
+// this is identical to the last challenge, except 
+// it's implemented for a string vector instead of a string
+impl AppendBar for Vec<String> {
+    fn append_bar(self) -> Self {
+        let mut cloned_self = self.clone();
+        cloned_self.push("Bar".to_string());
+        cloned_self
+    }
+}
 
 #[cfg(test)]
 mod tests {
